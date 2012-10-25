@@ -1,0 +1,4 @@
+%h1 Search pages
+= render 'search_form'
+%div{:class => "search-result"} 
+  = render :partial => "page_list", :locals => {:pages => @pages}

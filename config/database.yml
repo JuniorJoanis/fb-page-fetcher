@@ -1,0 +1,17 @@
+common: &common
+  adapter: postgresql
+  encoding: utf8
+  username : rnaud
+  password : melchi
+  
+development:
+  <<: *common
+  database: fb_page_fetcher_dev
+
+test:
+  <<: *common
+  database: fb_page_fetcher_test
+
+production:
+  <<: *common
+  database: fb_page_fetcher

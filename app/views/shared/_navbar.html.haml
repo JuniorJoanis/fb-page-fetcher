@@ -1,0 +1,15 @@
+%header.navbar.navbar-fixed-top
+  .navbar-inner
+    .container
+      = image_tag 'fluidicon.png', :size => "24x24", :class => 'brand'
+      = link_to "Page Fetcher", root_path, id: "logo", :class => 'brand'
+      .nav-collapse
+        %ul.nav
+          %li.home
+            = link_to root_path do
+              %i.icon-white.icon-home
+              Home
+          %li.search
+            = link_to "#" do
+              %i.icon-white.icon-search
+              Search Mates

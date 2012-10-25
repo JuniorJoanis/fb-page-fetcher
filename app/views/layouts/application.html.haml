@@ -1,0 +1,16 @@
+!!!
+%html
+  = render 'shared/header'
+  %body{:class => "#{controller.controller_name} #{controller.controller_name}_#{action_name} #{yield :custom_class}"}
+    = render 'shared/navbar'
+    .container-fluid
+      - flash.each do |name, msg|
+        - name == :notice ? type="success" : type="error"
+        - if msg.is_a?(String)
+          :javascript
+            $(document).ready(function() {
+            noty({type : "#{type}", text: "#{msg}"});
+            });
+      = yield
+  = render 'shared/footer'
+  = debug(params) if Rails.env.development?

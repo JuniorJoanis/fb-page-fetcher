@@ -1,0 +1,22 @@
+%p#notice= notice
+
+%p
+  = image_tag @page.image_url, :class =>"img-polaroid"
+%p
+  %b Fbuid:
+  = @page.fbuid
+%p
+  %b Name:
+  = @page.name
+
+%h2 Feed
+%table{:class => "table table-hover"}
+  %tr
+    %th From
+    %th Message
+    %th Picture
+  - @feed.each do |f|
+    %tr
+      %td= "#{f.raw_attributes["from"]["name"]}"
+      %td= "#{f.raw_attributes["message"]}"
+      %td= image_tag f.raw_attributes["picture"], :class =>"img-polaroid"

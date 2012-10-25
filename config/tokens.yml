@@ -1,0 +1,5 @@
+facebook:
+  production:
+    token: "AAADFZAIL8xY8BAC9F7LgxuMbw5bnczlHIWHOXQWtFPAxOZAAgpfytVikRX13O1GZAFFgYO354MJMvxSbxXIt5GB9tpwcHoZD"
+  development:
+    token: "AAADFZAIL8xY8BAC9F7LgxuMbw5bnczlHIWHOXQWtFPAxOZAAgpfytVikRX13O1GZAFFgYO354MJMvxSbxXIt5GB9tpwcHoZD"

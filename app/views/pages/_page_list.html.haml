@@ -1,0 +1,10 @@
+%table{:class => "table table-hover"}
+  %tr
+    %th Fbuid
+    %th Name
+    %th Picture
+  - pages.each do |page|
+    %tr
+      %td= link_to page.fbuid, page
+      %td= link_to page.name, page
+      %td= link_to (image_tag page.image_url, :alt =>  "#{ page.name}",  :class =>"img-polaroid"), page
