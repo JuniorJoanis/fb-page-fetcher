@@ -1,4 +1,4 @@
 %div{:class => "center"}
-  = form_tag(search_pages_path, :remote => true, :html => {:multipart => true, :class=> "well form-search form-center"})
+  = form_tag(pages_search_path, :remote => true, :html => {:multipart => true, :class=> "well form-search form-center"})
   = text_field_tag 'fbuid', nil, :placeholder => "FB Page uid",  :id =>  "fb-uid-field"
   = submit_tag 'Search', :class => "btn btn-primary", :disable_with => "Searching..."

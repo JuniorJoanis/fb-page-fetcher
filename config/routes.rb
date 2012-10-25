@@ -2,6 +2,7 @@ FbPageFetcher::Application.routes.draw do
   resources :pages do
      collection do
        post :search
+       get  :search
      end
   end
 
@@ -54,7 +55,7 @@ FbPageFetcher::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'pages#index'
+  root :to => 'pages#search'
 
   # See how all your routes lay out with "rake routes"
 
