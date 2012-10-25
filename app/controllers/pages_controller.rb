@@ -17,6 +17,7 @@ class PagesController < ApplicationController
     @pages = Page.all
 
     respond_to do |format|
+      format.html # show.html.erb
       format.json { render json: @pages }
     end
   end
