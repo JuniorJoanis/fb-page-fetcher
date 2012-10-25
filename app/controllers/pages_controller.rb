@@ -86,7 +86,8 @@ class PagesController < ApplicationController
       @pagefbuid = params[:fbuid]
       @page = FbGraph::Page.fetch(@pagefbuid.to_i)
       if @page 
-         @page = Page.create!({:name => @page.name, :image_url => @page.picture, :fbuid => @page.identifier})
+         page = Page.find_or_initialize_by_fbuid(:fbuid => @page.identifier)
+         page.update_attributes(:name => @page.name, :image_url => @page.picture) if page.name.nil? && page.image_url.nil?
       end
     end
 end
